@@ -104,7 +104,7 @@ class CarelinkClient:
     def async_client(self):
         """Return the httpx client."""
         if not self._async_client:
-            self._async_client = homeassistant.helpers.httpx_client.get_async_client()
+            self._async_client = homeassistant.helpers.httpx_client.get_async_client
         return self._async_client
 
     async def fetch_async(self, url, headers, params=None):
